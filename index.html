@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Оюутны портал</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="javascript" href="page.js" />
+  <body>
+    <!-- LOGIN SECTION -->
+    <main id="login" class="login-wrap">
+      <section class="sheet">
+        <h1><span>Оюутны</span> портал</h1>
+        <p class="sub">Зөвхөн сургуулийн бүртгэлтэй оюутан нэвтэрнэ.</p>
+
+        <label for="sid">Оюутны код</label>
+        <input
+          id="sid"
+          type="text"
+          autocomplete="username"
+          placeholder="жишээ: B240101"
+        />
+
+        <label for="pw">Нууц үг</label>
+        <div class="pw-row">
+          <input id="pw" type="password" autocomplete="current-password" />
+          <button type="button" id="toggle">Харуулах</button>
+        </div>
+
+        <p id="msg" class="msg" role="alert"></p>
+        <button id="submit" class="primary" type="button">Нэвтрэх</button>
+
+        <p class="hint">
+          Туршилт: <code>B240101</code> / <code>student123</code>
+        </p>
+      </section>
+    </main>
+
+    <!-- AFTER LOGIN -->
+    <div id="app" class="app hidden">
+      <header class="topbar">
+        <div class="who" id="who"></div>
+        <button class="ghost" id="logout" type="button">Гарах</button>
+      </header>
+
+      <h2 class="welcome" id="welcome"></h2>
+      <p class="meta" id="meta"></p>
+
+      <div class="grid">
+        <section class="panel">
+          <h2>Дүн</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Хичээл</th>
+                <th>Кредит</th>
+                <th>Дүн</th>
+              </tr>
+            </thead>
+            <tbody id="grades"></tbody>
+          </table>
+        </section>
+
+        <section class="panel">
+          <h2>Долоо хоногийн хуваарь</h2>
+          <ul class="plain" id="schedule"></ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
